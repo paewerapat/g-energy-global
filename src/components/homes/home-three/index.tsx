@@ -4,8 +4,6 @@ import Banner from "./Banner"
 import Service from "./Service"
 import Brand from "./Brand"
 import About from "./About"
-import Project from "./Project"
-import StrategicAdvantages from "@/components/common/StrategicAdvantages"
 
 const HomeThree = () => {
    return (
@@ -16,8 +14,6 @@ const HomeThree = () => {
             <Service />
             <Brand />
             <About />
-            <Project />
-            <StrategicAdvantages />
          </main>
          <FooterOne />
       </>
