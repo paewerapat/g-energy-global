@@ -48,7 +48,7 @@ const Case = () => {
                   </h5>
                   <h2 className="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Capabilities that support complex business needs</h2>
                </div>
-               <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms"
+               <Link href="/about#lets-connect" className="btn-one wow fadeInUp" data-wow-delay="200ms"
                   data-wow-duration="1500ms">Request Information <i className="fa-regular fa-arrow-right-long"></i></Link>
             </div>
          </div>
@@ -61,11 +61,8 @@ const Case = () => {
                      </div>
                      <div className="case__content">
                         <span className="primary-color sm-font">{item.sub_title}</span>
-                        <h3><Link href="/case-details" className="text-white primary-hover">{item.title}</Link></h3>
+                        <h3 className="text-white">{item.title}</h3>
                      </div>
-                     <Link href="/case-details" className="case__btn">
-                        <i className="fa-regular fa-arrow-right"></i>
-                     </Link>
                   </div>
                </SwiperSlide>
             ))}

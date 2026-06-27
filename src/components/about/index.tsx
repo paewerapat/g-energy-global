@@ -5,7 +5,8 @@ import AboutHome from "../homes/home-two/About"
 import Offer from "../homes/home-one/Offer"
 import Brand from "../homes/home-one/Brand"
 import Case from "../homes/home-one/Case"
-import Testimonial from "../homes/home-one/Testimonial"
+import LetsConnect from "./LetsConnect"
+import StrategicAdvantages from "../common/StrategicAdvantages"
 
 const About = () => {
    return (
@@ -17,7 +18,8 @@ const About = () => {
             <Offer />
             <Brand />
             <Case />
-            <Testimonial />
+            <LetsConnect />
+            <StrategicAdvantages />
          </main>
          <FooterOne />
       </>

@@ -102,7 +102,7 @@ const offer_data: DataType[] = [
             </clipPath>
          </defs>
       </svg></>),
-      title: "Tv",
+      title: "Project Coordination",
    },
    {
       id: 6,
@@ -121,7 +121,7 @@ const offer_data: DataType[] = [
 
 const Offer = () => {
    return (
-      <section className="offer-area secondary-bg pt-120 pb-200">
+      <section id="offer-section" className="offer-area secondary-bg pt-120 pb-200">
          <div className="offer__shadow wow fadeIn" data-wow-delay="200ms" data-wow-duration="1500ms">
             <Image src={shape_1} alt="shadow" />
          </div>
@@ -142,7 +142,7 @@ const Offer = () => {
                   </h5>
                   <h2 className="text-white wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">Integrated support for growth, innovation, and long-term value</h2>
                </div>
-               <Link href="/contact" className="btn-one wow fadeInUp" data-wow-delay="200ms"
+               <Link href="/about#lets-connect" className="btn-one wow fadeInUp" data-wow-delay="200ms"
                   data-wow-duration="1500ms">Let&apos;s Connect <i className="fa-regular fa-arrow-right-long"></i></Link>
             </div>
             <div className="row g-4">

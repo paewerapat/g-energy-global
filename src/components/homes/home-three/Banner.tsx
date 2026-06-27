@@ -1,6 +1,3 @@
-"use client"
-import { useState } from "react";
-import VideoPopup from "@/modals/VideoPopup";
 import Image from "next/image"
 import Link from "next/link"
 
@@ -10,12 +7,8 @@ import shape_3 from "@/assets/images/banner/banner-three-right-shape.png"
 import banner_thumb from "@/assets/images/banner/banner-three-image.png"
 
 const Banner = () => {
-
-   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
    return (
-      <>
-         <div className="banner-three-area">
+      <div className="banner-three-area">
             <div className="banner-three__bg">
                <Image className="sway_Y__animation" src={shape_1} alt="bg-image" />
             </div>
@@ -41,13 +34,6 @@ const Banner = () => {
                         <div className="banner-three__info wow fadeInUp mt-50" data-wow-delay="600ms"
                            data-wow-duration="1500ms">
                            <Link className="wow fadeInUp btn-one mt-0" href="/about">Discover Our Approach <i className="fa-regular fa-arrow-right-long"></i></Link>
-                           <div className="banner-three__video-btn d-flex gap-4 align-items-center">
-                              <div className="video-btn video-pulse">
-                                 <a onClick={() => setIsVideoOpen(true)} style={{ cursor: "pointer" }} className="video-popup"><i
-                                    className="fa-solid fa-play"></i></a>
-                              </div>
-                              <h5 className="text-white">See How We Work</h5>
-                           </div>
                         </div>
                      </div>
                   </div>
@@ -59,13 +45,7 @@ const Banner = () => {
                   </div>
                </div>
             </div>
-         </div>
-         <VideoPopup
-            isVideoOpen={isVideoOpen}
-            setIsVideoOpen={setIsVideoOpen}
-            videoId="eEzD-Y97ges"
-         />
-      </>
+      </div>
    )
 }
 

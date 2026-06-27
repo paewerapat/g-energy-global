@@ -40,7 +40,7 @@ const setting = {
 
 const Brand = () => {
    return (
-      <div className="brand-area">
+      <div id="brand-section" className="brand-area">
          <div className="container">
             <div className="brand__wrp">
                <div className="brand__shape">

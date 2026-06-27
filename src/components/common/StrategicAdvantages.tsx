@@ -25,7 +25,7 @@ const advantages = [
    },
 ]
 
-const Testimonial = () => {
+const StrategicAdvantages = () => {
    return (
       <section className="testimonial-area pt-120 pb-120">
          <div className="container">
@@ -54,4 +54,4 @@ const Testimonial = () => {
    )
 }
 
-export default Testimonial
+export default StrategicAdvantages

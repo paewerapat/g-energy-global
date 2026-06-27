@@ -68,16 +68,16 @@ const About = () => {
                                  <g clipPath="url(#clip0_918_1337)">
                                     <path
                                        d="M5.41667 4.33337H9.75L11.9167 9.75004L9.20833 11.375C10.3685 13.7275 12.2725 15.6315 14.625 16.7917L16.25 14.0834L21.6667 16.25V20.5834C21.6667 21.158 21.4384 21.7091 21.0321 22.1154C20.6257 22.5218 20.0746 22.75 19.5 22.75C15.2742 22.4932 11.2885 20.6987 8.2949 17.7051C5.3013 14.7115 3.5068 10.7258 3.25 6.50004C3.25 5.9254 3.47827 5.3743 3.8846 4.96798C4.29093 4.56165 4.84203 4.33337 5.41667 4.33337Z"
-                                       stroke="white" strokeWidth="2" stroke-linecap="round"
-                                       stroke-linejoin="round" />
+                                       stroke="white" strokeWidth="2" strokeLinecap="round"
+                                       strokeLinejoin="round" />
                                     <path
                                        d="M16.25 7.58337C16.8246 7.58337 17.3757 7.81165 17.7821 8.21798C18.1884 8.6243 18.4167 9.1754 18.4167 9.75004"
-                                       stroke="white" strokeWidth="2" stroke-linecap="round"
-                                       stroke-linejoin="round" />
+                                       stroke="white" strokeWidth="2" strokeLinecap="round"
+                                       strokeLinejoin="round" />
                                     <path
                                        d="M16.25 3.25C17.9739 3.25 19.6272 3.93482 20.8462 5.15381C22.0652 6.37279 22.75 8.02609 22.75 9.75"
-                                       stroke="white" strokeWidth="2" stroke-linecap="round"
-                                       stroke-linejoin="round" />
+                                       stroke="white" strokeWidth="2" strokeLinecap="round"
+                                       strokeLinejoin="round" />
                                  </g>
                                  <defs>
                                     <clipPath>
