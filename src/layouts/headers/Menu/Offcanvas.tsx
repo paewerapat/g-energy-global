@@ -15,10 +15,6 @@ const Offcanvas = ({offCanvas, setOffCanvas }: MobileSidebarProps) => {
             <Link href="/" className="logo mb-40 fw-bold fs-5 d-block">
                G-Energy Great Co., Ltd.
             </Link>
-            <div className="sidebar__search mb-30">
-               <input type="text" placeholder="Search..." />
-               <i className="fa-regular fa-magnifying-glass"></i>
-            </div>
             <div className="mobile-menu overflow-hidden mean-container">
                <div className="mean-bar">
                   <nav className="mean-nav">
