@@ -76,7 +76,7 @@ const About = ({style}:StyleType) => {
                      </ul>
                   </div>
                   <div className="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                     <Link href="/about" className="btn-one">About G-Energy Great <i
+                     <Link href="#lets-connect" className="btn-one">Let&apos;s Connect <i
                         className="fa-regular fa-arrow-right-long"></i></Link>
                      <Image src={style?shape_6:shape_5} alt="singature" />
                   </div>

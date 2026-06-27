@@ -36,10 +36,10 @@ const Service = () => {
                            <div className="icon">
                               <Image src={item.icon} alt="icon" />
                            </div>
-                           <h4><Link href="/service-details" className="text-white mt-25 mb-15">{item.title}</Link>
+                           <h4><Link href="/about#offer-section" className="text-white mt-25 mb-15">{item.title}</Link>
                            </h4>
                            <p className="text-white">{item.desc}</p>
-                           <Link className="mt-20 read-more-btn text-white" href="/service-details">Read More <i
+                           <Link className="mt-20 read-more-btn text-white" href="/about#offer-section">Read More <i
                               className="fa-regular fa-arrow-right-long text-white"></i></Link>
                         </div>
                      </div>

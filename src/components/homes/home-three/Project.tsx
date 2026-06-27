@@ -2,7 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import Image from "next/image";
-import Link from "next/link";
 import Case_data from '@/data/CaseData';
 
 import shape_1 from "@/assets/images/shape/service-two-shape-left.png"
@@ -65,12 +64,8 @@ const Project = () => {
                         </div>
                         <div className="case__content">
                            <span className="primary-color sm-font">{item.sub_title}</span>
-                           <h3><Link href="/case-details" className="text-white primary-hover">{item.title}</Link>
-                           </h3>
+                           <h3 className="text-white">{item.title}</h3>
                         </div>
-                        <Link href="/case-details" className="case__btn">
-                           <i className="fa-regular fa-arrow-right"></i>
-                        </Link>
                      </div>
                   </SwiperSlide>
                ))}

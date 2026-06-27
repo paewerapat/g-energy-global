@@ -4,12 +4,8 @@ import Banner from "./Banner"
 import Service from "./Service"
 import Brand from "./Brand"
 import About from "./About"
-import Counter from "../home-one/Counter"
 import Project from "./Project"
-import BannerVideo from "./BannerVideo"
-import Pricing from "./Pricing"
-import Testimonial from "./Testimonial"
-import Blog from "../home-one/Blog"
+import StrategicAdvantages from "@/components/common/StrategicAdvantages"
 
 const HomeThree = () => {
    return (
@@ -20,12 +16,8 @@ const HomeThree = () => {
             <Service />
             <Brand />
             <About />
-            <Counter />
             <Project />
-            <BannerVideo />
-            <Pricing style={false} />
-            <Testimonial />
-            <Blog />
+            <StrategicAdvantages />
          </main>
          <FooterOne />
       </>

@@ -44,19 +44,19 @@ const FooterOne = () => {
                <div className="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Solutions</h3>
                   <ul>
-                     <li><Link href="/service-solutions"><i className="fa-regular fa-angles-right me-1"></i> Energy Solutions</Link></li>
-                     <li><Link href="/service-solutions"><i className="fa-regular fa-angles-right me-1"></i> Technology Distribution</Link></li>
-                     <li><Link href="/service-solutions"><i className="fa-regular fa-angles-right me-1"></i> Digital Infrastructure</Link></li>
-                     <li><Link href="/service-solutions"><i className="fa-regular fa-angles-right me-1"></i> Business Consulting</Link></li>
+                     <li><Link href="/about#offer-section"><i className="fa-regular fa-angles-right me-1"></i> Energy Solutions</Link></li>
+                     <li><Link href="/about#offer-section"><i className="fa-regular fa-angles-right me-1"></i> Technology Distribution</Link></li>
+                     <li><Link href="/about#offer-section"><i className="fa-regular fa-angles-right me-1"></i> Digital Infrastructure</Link></li>
+                     <li><Link href="/about#offer-section"><i className="fa-regular fa-angles-right me-1"></i> Business Consulting</Link></li>
                   </ul>
                </div>
                <div className="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                   <h3 className="footer-title">Quick Link</h3>
                   <ul>
                      <li><Link href="/about"><i className="fa-regular fa-angles-right me-1"></i> About G-Energy Great</Link></li>
-                     <li><Link href="/service-solutions"><i className="fa-regular fa-angles-right me-1"></i> Solutions</Link></li>
-                     <li><Link href="/case"><i className="fa-regular fa-angles-right me-1"></i> Our Capabilities</Link></li>
-                     <li><Link href="/contact"><i className="fa-regular fa-angles-right me-1"></i> Contact Us</Link></li>
+                     <li><Link href="/about#offer-section"><i className="fa-regular fa-angles-right me-1"></i> Solutions</Link></li>
+                     <li><Link href="/about#case-section"><i className="fa-regular fa-angles-right me-1"></i> Our Capabilities</Link></li>
+                     <li><Link href="/about#lets-connect"><i className="fa-regular fa-angles-right me-1"></i> Contact Us</Link></li>
                   </ul>
                </div>
                <div className="footer__item item-big wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">

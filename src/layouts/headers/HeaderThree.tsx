@@ -17,7 +17,7 @@ const HeaderThree = () => {
          <header className={`header-area header-three-area ${sticky ? "menu-fixed fadeInDown" : ""}`}>
             <div className="container header__container">
                <div className="header__main">
-                  <Link href="/" className="logo fw-bold fs-5">
+                  <Link href="/" className="logo text-white fw-bold fs-5">
                      G-Energy Great Co., Ltd.
                   </Link>
                   <div className="main-menu d-none d-lg-block">
@@ -43,7 +43,7 @@ const HeaderThree = () => {
                      </nav>
                   </div>
                   <div className="d-none d-lg-inline-block">
-                     <Link href="/contact" className="btn-one">Get A Quote <i
+                     <Link href="/about#lets-connect" className="btn-one">Get A Quote <i
                         className="fa-regular fa-arrow-right-long"></i></Link>
                   </div>
                   <div className="bars d-block d-lg-none" onClick={() => setOffCanvas(true)}>
