@@ -1,0 +1,178 @@
+// =====================================================================
+// Motion & effects (redesign). Driven by MotionProvider.tsx.
+// =====================================================================
+
+// Scroll-reveal: hide .wow elements until MotionProvider reveals them.
+.js-motion .wow:not(.is-visible) {
+	visibility: hidden;
+}
+
+// Scroll progress bar
+.ge-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	z-index: 10000;
+	transform-origin: 0 50%;
+	transform: scaleX(var(--ge-progress, 0));
+	background: linear-gradient(90deg, #3c72fc, #7aa2ff);
+	pointer-events: none;
+}
+
+// Cursor spotlight on cards
+.spotlight {
+	position: relative;
+	isolation: isolate;
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(60, 114, 252, 0.12), transparent 45%);
+		opacity: 0;
+		transition: opacity 0.35s ease;
+		pointer-events: none;
+		z-index: -1;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
+}
+
+// Gradient text
+.ge-gradient-text {
+	background: linear-gradient(92deg, #ffffff 0%, #9db8ff 45%, #7aa2ff 70%, #ffffff 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 200% auto;
+	animation: ge-shine 2.4s ease-out 0.6s 1 both;
+}
+@keyframes ge-shine {
+	to {
+		background-position: 100% center;
+	}
+}
+
+// Pulsing status dot
+.ge-pulse {
+	position: relative;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #22c55e;
+	display: inline-block;
+	flex: none;
+	&::after {
+		content: "";
+		position: absolute;
+		inset: -4px;
+		border-radius: 50%;
+		border: 2px solid #22c55e;
+		animation: ge-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+	}
+}
+@keyframes ge-ping {
+	0% {
+		transform: scale(0.6);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.8);
+		opacity: 0;
+	}
+}
+
+// Floating
+@keyframes ge-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-12px);
+	}
+}
+@keyframes ge-orb {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	50% {
+		transform: translate(40px, -30px) scale(1.12);
+	}
+}
+@keyframes ge-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes ge-marquee {
+	to {
+		transform: translateX(-50%);
+	}
+}
+@keyframes ge-dash {
+	to {
+		stroke-dashoffset: -24;
+	}
+}
+@keyframes ge-grow {
+	from {
+		transform: scaleY(0.2);
+	}
+}
+@keyframes ge-scroll {
+	0% {
+		transform: translate(-50%, 0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, 14px);
+		opacity: 0;
+	}
+}
+@keyframes ge-alert-in {
+	from {
+		opacity: 0;
+		transform: translateX(-16px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes ge-flow {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(300%);
+	}
+}
+
+// Reduced motion: stop ambient animation, show everything.
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+	.js-motion .wow {
+		visibility: visible !important;
+	}
+	.ge-marquee__track {
+		animation: none !important;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100% !important;
+		.ge-marquee__group[aria-hidden] {
+			display: none;
+		}
+	}
+}

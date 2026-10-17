@@ -1,6 +1,6 @@
 :root {
 	// Font family ***
-	--kumbh: "Kumbh Sans", sans-serif;
+	--kumbh: "Kumbh Sans", "IBM Plex Sans Thai", sans-serif;
 
 	// Colors ***
 	--primary-color: #3c72fc;
@@ -25,6 +25,12 @@
 
 	// Box shadow ***
 	--shadow: 0px 4px 25px 0px #0000000f;
+
+	// Redesign tokens ***
+	--ge-navy: #0b1030;
+	--ge-energy: #22c55e;
+	--ge-radius: 14px;
+	--ge-shadow-lg: 0 24px 48px -12px rgba(11, 16, 48, 0.18);
 }
 
 // Dark mood collor area start here ***

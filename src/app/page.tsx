@@ -1,13 +1,10 @@
-import HomeThree from "@/components/homes/home-three";
+import Home from "@/components/home";
 import Wrapper from "@/layouts/Wrapper";
 
-export const metadata = {
-  title: "G-Energy Great Co., Ltd. | Energy, Technology & Business Solutions",
-};
 const page = () => {
   return (
     <Wrapper>
-      <HomeThree />
+      <Home />
     </Wrapper>
   )
 }

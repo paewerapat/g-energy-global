@@ -1,41 +1,84 @@
+"use client"
 import Link from "next/link"
+import { useEffect, useRef } from "react";
 import MobileMenu from "./MobileMenu";
+import Logo from "../Logo";
+import site from "@/data/site";
 
 interface MobileSidebarProps {
    offCanvas: boolean;
    setOffCanvas: (offCanvas: boolean) => void;
 }
 
-const Offcanvas = ({offCanvas, setOffCanvas }: MobileSidebarProps) => {
+const Offcanvas = ({ offCanvas, setOffCanvas }: MobileSidebarProps) => {
+   const close = () => setOffCanvas(false);
+   const panelRef = useRef<HTMLDivElement>(null);
+   const closeRef = useRef<HTMLButtonElement>(null);
+
+   // Dialog behaviour: focus moves inside, Tab is trapped, Escape closes, the page behind
+   // is inert, and focus returns to the menu button on close.
+   useEffect(() => {
+      // Set imperatively: React 18 cannot render the `inert` attribute from a prop.
+      panelRef.current?.toggleAttribute("inert", !offCanvas);
+      if (!offCanvas) return;
+      const opener = document.activeElement as HTMLElement | null;
+      const background = document.querySelectorAll<HTMLElement>("main, footer, header");
+      background.forEach((el) => el.setAttribute("inert", ""));
+      document.body.style.overflow = "hidden";
+      closeRef.current?.focus();
+
+      const onKey = (e: KeyboardEvent) => {
+         if (e.key === "Escape") return setOffCanvas(false);
+         if (e.key !== "Tab" || !panelRef.current) return;
+         const focusables = panelRef.current.querySelectorAll<HTMLElement>("a[href], button:not([disabled])");
+         const first = focusables[0];
+         const last = focusables[focusables.length - 1];
+         if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+         } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+         }
+      };
+      document.addEventListener("keydown", onKey);
+      return () => {
+         document.removeEventListener("keydown", onKey);
+         background.forEach((el) => el.removeAttribute("inert"));
+         document.body.style.overflow = "";
+         opener?.focus();
+      };
+   }, [offCanvas, setOffCanvas]);
 
    return (
-      <>
-         <div id="targetElement" className={`sidebar-area ${offCanvas ? "" : "sidebar__hide"}`}>
-            <div onClick={() => setOffCanvas(false)} className="sidebar__overlay"></div>
-            <Link href="/" className="logo mb-40 fw-bold fs-5 d-block">
-               G-Energy Great Co., Ltd.
-            </Link>
-            <div className="mobile-menu overflow-hidden mean-container">
-               <div className="mean-bar">
-                  <nav className="mean-nav">
-                     <MobileMenu />
-                  </nav>
+      <div
+         id="targetElement"
+         ref={panelRef}
+         className={`sidebar-area ge-sidebar ${offCanvas ? "" : "sidebar__hide"}`}
+         role="dialog"
+         aria-modal="true"
+         aria-label="Menu"
+         aria-hidden={!offCanvas}
+      >
+         <div onClick={close} className="sidebar__overlay"></div>
+         <button ref={closeRef} type="button" onClick={close} id="closeButton" className="text-white" aria-label="Close menu"><i className="fa-solid fa-xmark"></i></button>
+         <Logo className="mb-40" onClick={close} />
+         <nav className="mobile-menu overflow-hidden mean-container" aria-label="Mobile">
+            <div className="mean-bar">
+               <div className="mean-nav">
+                  <MobileMenu onNavigate={close} />
                </div>
             </div>
-            <ul className="info pt-40">
-               <li><i className="fa-solid primary-color fa-paper-plane"></i> <Link href="mailto:info@g-energy.global">info@g-energy.global</Link></li>
-               <li className="py-2"><i className="fa-solid primary-color fa-globe"></i> <Link href="https://www.g-energy.global" target="_blank" rel="noreferrer">www.g-energy.global</Link></li>
-               <li><i className="fa-solid primary-color fa-location-dot"></i> <span>Bangkok, Thailand</span></li>
-            </ul>
-            <div className="social-icon mt-20">
-               <Link href="#"><i className="fa-brands fa-facebook-f"></i></Link>
-               <Link href="#"><i className="fa-brands fa-twitter"></i></Link>
-               <Link href="#"><i className="fa-brands fa-linkedin-in"></i></Link>
-               <Link href="#"><i className="fa-brands fa-youtube"></i></Link>
-            </div>
-            <button onClick={() => setOffCanvas(false)} id="closeButton" className="text-white"><i className="fa-solid fa-xmark"></i></button>
-         </div>
-      </>
+         </nav>
+         <Link href="/contact" onClick={close} className="btn-one d-block text-center mt-30">
+            Talk to our team <i className="fa-regular fa-arrow-right-long"></i>
+         </Link>
+         <ul className="info pt-40 mt-40">
+            <li><i className="fa-solid primary-color fa-paper-plane"></i> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+            {site.phone && <li className="pt-2"><i className="fa-solid primary-color fa-phone"></i> <a href={`tel:${site.phone.replace(/\s/g, "")}`}>{site.phone}</a></li>}
+            <li className="pt-2"><i className="fa-solid primary-color fa-location-dot"></i> <a href={site.mapUrl} target="_blank" rel="noreferrer">{site.address}</a></li>
+         </ul>
+      </div>
    )
 }
 

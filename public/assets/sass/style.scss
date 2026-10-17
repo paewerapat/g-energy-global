@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------
 
-Project: G-Energy Great Co., Ltd. - Energy Solutions & Technology Distribution
+Project: G-Energy Global Co., Ltd. - Energy Solutions & Technology Distribution
 
 -------------------------------------------------------------------
 CSS TABLE OF CONTENTS
@@ -27,8 +27,7 @@ CSS TABLE OF CONTENTS
 
 ------------------------------------------------------------------*/
 
-// Google fonts ***
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Google fonts are loaded in src/app/layout.tsx ***
 
 // Abstracts styles ***
 @import "_abstracts/_mixins";
@@ -46,6 +45,8 @@ CSS TABLE OF CONTENTS
 @import "_layout/_banner";
 @import "_layout/_section";
 @import "_layout/_footer";
+@import "_layout/_ge";
 
 // Animation styles***
 @import "_base/_animation";
+@import "_base/_effects";
