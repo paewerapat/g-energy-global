@@ -7,6 +7,7 @@ import Marquee from "../common/Marquee"
 import MarqueeGroup from "../common/MarqueeGroup"
 import CtaBand from "../common/CtaBand"
 import ServiceExplorer from "./ServiceExplorer"
+import ProductLine from "./ProductLine"
 import site from "@/data/site"
 import Image from "next/image"
 import { companyLogos } from "@/data/brands"
@@ -77,6 +78,20 @@ const Redington = () => {
                            <p className="ge-footnote mt-30">Network figures published by Redington. Certifications held by Redington include ISO 27001:2022, ISO 9001:2015, ISO 27701 and SOC 2.</p>
                         </div>
                      </div>
+                  </div>
+               </div>
+            </section>
+
+            {/* Redington Product Line 2026 */}
+            <section id="product-line" className="ge-product-line pt-120 pb-120">
+               <div className="container">
+                  <SectionHeader
+                     eyebrow="Redington Product Line 2026"
+                     title="Solutions we supply through Redington"
+                     lead="Enterprise software, infrastructure, cybersecurity, cloud and AI from Redington's 2026 portfolio — sourced, deployed and supported in Thailand."
+                  />
+                  <div className="mt-60">
+                     <ProductLine />
                   </div>
                </div>
             </section>

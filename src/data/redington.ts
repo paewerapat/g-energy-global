@@ -120,3 +120,111 @@ export const redingtonBrands: Brand[] = [
    brands.microsoft, brands.aws, brands.googleCloud, brands.apple, brands.dell, brands.cisco,
    brands.ibm, brands.fortinet, brands.paloalto, brands.autodesk, brands.hp,
 ];
+
+// Redington Product Line 2026 (source: "Redington Product Line 2026.pdf" supplied by the client).
+export interface ProductCategory {
+   key: string;
+   title: string;
+   short: string;
+   icon: string;
+}
+
+export interface Product {
+   brand: Brand;
+   category: ProductCategory["key"];
+   desc: string;
+   verticals: string[];
+}
+
+export const productCategories: ProductCategory[] = [
+   { key: "infra", title: "Software & Infrastructure", short: "Software / Infra", icon: "fa-light fa-server" },
+   { key: "security", title: "Cybersecurity", short: "Cybersecurity", icon: "fa-light fa-shield-check" },
+   { key: "cloud-ai", title: "Cloud & AI", short: "Cloud / AI", icon: "fa-light fa-brain-circuit" },
+];
+
+export const productLine: Product[] = [
+   {
+      brand: brands.qumulo,
+      category: "infra",
+      desc: "Scale-out unstructured hybrid file storage, real-time data visibility and multi-cloud bursting (AWS / Azure / GCP).",
+      verticals: ["Media & Entertainment", "Life Sciences", "Healthcare", "Academic / HPC"],
+   },
+   {
+      brand: brands.mariadb,
+      category: "infra",
+      desc: "Distributed SQL / relational database, open-source SkySQL DBaaS, high-concurrency OLTP and Galera clustering.",
+      verticals: ["Government / Smart Nation", "FinTech", "Logistics", "eCommerce"],
+   },
+   {
+      brand: brands.resulticks,
+      category: "infra",
+      desc: "Real-time omnichannel customer engagement, marketing automation, CDP and audience segmentation.",
+      verticals: ["Retail & FMCG", "BFSI", "Telecommunications", "Hospitality"],
+   },
+   {
+      brand: brands.turingData,
+      category: "infra",
+      desc: "High-throughput AI storage software with a distributed metadata engine, GPU-direct storage (GDS / RDMA) and multi-tier object offload.",
+      verticals: ["GenAI Startups", "Autonomous Systems", "Defense / Research", "Higher Education"],
+   },
+   {
+      brand: brands.supermicro,
+      category: "infra",
+      desc: "Building Block Solutions®, high-density GPU servers (NVIDIA HGX / GB200), direct-to-chip liquid cooling and edge / rack-scale compute.",
+      verticals: ["GenAI / LLM Training & Inference", "Autonomous Driving", "Life Sciences", "FinTech (HFT)"],
+   },
+   {
+      brand: brands.kaytus,
+      category: "infra",
+      desc: "Hyperscale and enterprise servers, multi-node high-density architectures, all-liquid cooling (PUE < 1.1) and turnkey modular AI Compute Pods.",
+      verticals: ["Data Center Co-location", "Cloud Service Providers", "AI Startups / HPC", "Higher Education"],
+   },
+   {
+      brand: brands.cloudcasa,
+      category: "security",
+      desc: "Cloud-native Kubernetes backup and disaster recovery — K8s databases, PV / PVCs and multi-cloud cluster migration. By Catalogic.",
+      verticals: ["Cloud-native ISVs", "FinTech", "Digital Native Businesses", "Enterprise DevSecOps"],
+   },
+   {
+      brand: brands.gambitCyber,
+      category: "security",
+      desc: "AI-native Continuous Threat Exposure Management (CTEM), threat-informed defense, purple-teaming automation and attack-surface validation.",
+      verticals: ["BFSI", "Critical Information Infrastructure", "Defense / GovTech", "Managed SOCs"],
+   },
+   {
+      brand: brands.legit,
+      category: "security",
+      desc: "Automated privacy governance — DSAR automation, RoPA, continuous consent and policy-driven data deletion.",
+      verticals: ["Healthcare", "FinTech", "Legal Services", "Cross-Border Retail / BPO"],
+   },
+   {
+      brand: brands.dataResolve,
+      category: "security",
+      desc: "Insider-threat detection, user behavior analytics (UBA), DLP and employee endpoint activity auditing.",
+      verticals: ["Corporate Legal", "Professional Services", "High-Tech Manufacturing", "BPOs"],
+   },
+   {
+      brand: { ...brands.tencentCloud, name: "Tencent Cloud" },
+      category: "cloud-ai",
+      desc: "Hyperscale public cloud, edge compute, low-latency audio / video streaming (TRTC), gaming solutions and the WeChat ecosystem.",
+      verticals: ["Gaming / eSports", "Cross-Border eCommerce", "Web3", "OTT / Media"],
+   },
+   {
+      brand: brands.koreAi,
+      category: "cloud-ai",
+      desc: "Enterprise conversational AI, agentic workflow automation, GenAI fine-tuning / orchestration and contact-center AI.",
+      verticals: ["Banking / FinTech", "Public Sector", "Telco", "Healthcare"],
+   },
+   {
+      brand: brands.crayonData,
+      category: "cloud-ai",
+      desc: "maya.ai customer personalization engine, lifestyle AI recommendation graph, behavioral targeting and cross-merchant marketplace monetization.",
+      verticals: ["Tier-1 & Digital Banking", "Cards & Payments", "Travel & Airlines", "eCommerce"],
+   },
+   {
+      brand: brands.sapphireUno,
+      category: "cloud-ai",
+      desc: "Unified enterprise orchestration — low-code IT Service Management (ITSM), Enterprise Asset Management (EAM) and Source-to-Pay procurement.",
+      verticals: ["Mid-to-Large Enterprises", "Healthcare", "Manufacturing", "Smart Facility Operations"],
+   },
+];

@@ -38,7 +38,8 @@ const menu_data: MenuItem[] = [
         title: "Redington Services",
         link: "/redington",
         sub_menus: [
-            ...redingtonServices.slice(0, 7).map((s) => ({ title: s.title, link: `/redington#${s.slug}`, icon: s.icon })),
+            { title: "Product Line 2026", link: "/redington#product-line", icon: "fa-light fa-boxes-stacked" },
+            ...redingtonServices.slice(0, 6).map((s) => ({ title: s.title, link: `/redington#${s.slug}`, icon: s.icon })),
             { title: "View all services", link: "/redington#services", isAll: true },
         ],
     },

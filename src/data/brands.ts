@@ -36,7 +36,8 @@ import vanguardWhite from "@/assets/images/logos/vanguard-white.svg";
 
 export interface Brand {
    name: string;
-   logo: StaticImageData;
+   /** omitted until an official logo file is supplied — BrandLogo then renders the name */
+   logo?: StaticImageData;
    /** square marks look small next to wordmarks, so they render a little larger */
    square?: boolean;
 }
@@ -67,6 +68,14 @@ export const brands = {
    autodesk: { name: "Autodesk", logo: autodesk },
    hp: { name: "HP", logo: hp, square: true },
    redington: { name: "Redington", logo: redington },
+   // Redington Product Line 2026 — logos pending (rendered as wordmark text until supplied)
+   qumulo: { name: "Qumulo" },
+   turingData: { name: "Turing Data" },
+   cloudcasa: { name: "CloudCasa" },
+   gambitCyber: { name: "Gambit Cyber" },
+   legit: { name: "Legit" },
+   koreAi: { name: "Kore.ai" },
+   crayonData: { name: "Crayon Data" },
 } satisfies Record<string, Brand>;
 
 export const companyLogos = {

@@ -6,6 +6,7 @@ import { redingtonServices } from "@/data/redington"
 
 const topics = [
    ...solutions.map((s) => ({ value: s.slug, label: s.title })),
+   { value: "redington-product-line", label: "Redington · Product Line 2026" },
    ...redingtonServices.map((s) => ({ value: s.slug, label: `Redington · ${s.title}` })),
    { value: "partnership", label: "Channel / reseller partnership" },
    { value: "other", label: "Something else" },
@@ -63,10 +64,10 @@ const ContactForm = () => {
                      {topics.slice(0, solutions.length).map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </optgroup>
                   <optgroup label="Redington services">
-                     {topics.slice(solutions.length, solutions.length + redingtonServices.length).map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                     {topics.slice(solutions.length, solutions.length + redingtonServices.length + 1).map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </optgroup>
                   <optgroup label="Other">
-                     {topics.slice(solutions.length + redingtonServices.length).map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                     {topics.slice(solutions.length + redingtonServices.length + 1).map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
                   </optgroup>
                </select>
             </div>
