@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design source files (print artwork / brand sheets) — the web-ready copies live in public/assets/images/brand
+/files-logo/
+/G-Energy-Artwork/
+/*.pdf
