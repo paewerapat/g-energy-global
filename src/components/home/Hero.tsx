@@ -2,10 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import site from "@/data/site"
 
-import bg_shape from "@/assets/images/bg/banner-three-bg.png"
-import shape_left from "@/assets/images/banner/banner-three-left-shape.png"
-import shape_right from "@/assets/images/banner/banner-three-right-shape.png"
-import hero_thumb from "@/assets/images/banner/banner-three-image.png"
+import brandMark from "@/assets/images/brand/ge-mark-reversed.svg"
+import brandWaves from "@/assets/images/brand/brand-waves.svg"
 
 const heroStats = [
    { value: "500+", label: "Enterprise clients in the group" },
@@ -16,17 +14,10 @@ const heroStats = [
 const Hero = () => {
    return (
       <section className="banner-three-area ge-hero">
-         <div className="ge-hero__grid" aria-hidden="true"></div>
          <div className="ge-hero__orb ge-hero__orb--1" aria-hidden="true"></div>
          <div className="ge-hero__orb ge-hero__orb--2" aria-hidden="true"></div>
-         <div className="banner-three__bg" aria-hidden="true">
-            <Image className="sway_Y__animation" src={bg_shape} alt="" priority />
-         </div>
-         <div className="banner-three__shape-left wow slideInLeft" data-wow-duration="1500ms" aria-hidden="true">
-            <Image className="sway_Y__animationY" src={shape_left} alt="" />
-         </div>
-         <div className="banner-three__shape-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms" aria-hidden="true">
-            <Image className="sway__animationX" src={shape_right} alt="" />
+         <div className="ge-hero__waves" aria-hidden="true">
+            <Image src={brandWaves} alt="" priority />
          </div>
 
          <div className="banner-three__container">
@@ -61,15 +52,10 @@ const Hero = () => {
                <div className="col-lg-5">
                   <div className="ge-hero__visual wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1200ms">
                      <div className="ge-hero__ring" aria-hidden="true"></div>
-                     <div className="image">
-                        <Image src={hero_thumb} alt="Secure enterprise cloud and infrastructure illustration" priority />
-                     </div>
-                     <div className="ge-float ge-float--top" aria-hidden="true">
-                        <span className="ge-float__icon"><i className="fa-light fa-shield-check"></i></span>
-                        <div>
-                           <strong>Audit-ready security</strong>
-                           <small>DLP · insider-threat</small>
-                        </div>
+                     <div className="ge-hero__ring ge-hero__ring--inner" aria-hidden="true"></div>
+                     <div className="ge-hero__glow" aria-hidden="true"></div>
+                     <div className="ge-hero__mark">
+                        <Image src={brandMark} alt="G-Energy" priority />
                      </div>
                      <div className="ge-float ge-float--bottom" aria-hidden="true">
                         <span className="ge-float__icon is-green"><i className="fa-light fa-chart-line-up"></i></span>

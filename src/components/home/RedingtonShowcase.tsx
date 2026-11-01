@@ -5,17 +5,13 @@ import SectionHeader from "../common/SectionHeader"
 import { redingtonServices, redingtonStats } from "@/data/redington"
 import { companyLogos } from "@/data/brands"
 
-import shape_left from "@/assets/images/shape/offer-bg-shape-left.png"
-import shape_right from "@/assets/images/shape/offer-bg-shape-right.png"
+import brandWatermark from "@/assets/images/brand/brand-watermark.svg"
 
 const RedingtonShowcase = () => {
    return (
       <section className="ge-redington ge-dark pt-120 pb-120">
-         <div className="ge-redington__shape-left" aria-hidden="true">
-            <Image className="wow fadeInUpBig" data-wow-delay="300ms" data-wow-duration="1500ms" src={shape_left} alt="" />
-         </div>
-         <div className="ge-redington__shape-right" aria-hidden="true">
-            <Image className="wow fadeInDownBig" data-wow-delay="300ms" data-wow-duration="1500ms" src={shape_right} alt="" />
+         <div className="ge-redington__watermark" aria-hidden="true">
+            <Image src={brandWatermark} alt="" />
          </div>
          <div className="container position-relative">
             <div className="row g-5 align-items-center">

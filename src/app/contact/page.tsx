@@ -4,7 +4,7 @@ import Wrapper from "@/layouts/Wrapper";
 
 export const metadata: Metadata = {
   title: "Contact us",
-  description: "Talk to the G-Energy Global team in Bangkok about solutions, Redington services or partnerships.",
+  description: "Talk to the G-Energy team in Bangkok about solutions, Redington services or partnerships.",
 };
 
 const page = () => {

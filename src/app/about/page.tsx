@@ -4,7 +4,7 @@ import Wrapper from "@/layouts/Wrapper";
 
 export const metadata: Metadata = {
   title: "About us",
-  description: "Part of the Vanguard Biztech group and an authorised Redington partner, G-Energy Global brings global enterprise technology to organisations in Thailand.",
+  description: "Part of the Vanguard Biztech group and an authorised Redington partner, G-Energy Great Co., Ltd. brings global enterprise technology to organisations in Thailand.",
 };
 
 const page = () => {

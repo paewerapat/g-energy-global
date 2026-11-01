@@ -4,21 +4,22 @@ import site from "@/data/site"
 interface CtaBandProps {
    title?: string;
    lead?: string;
+   className?: string;
 }
 
 const CtaBand = ({
    title = "Let's talk about what you need",
    lead = "Tell us what you're working on. A specialist from our Bangkok team will get back to you with the right next step.",
+   className = "",
 }: CtaBandProps) => {
    return (
-      <section className="ge-cta pb-120">
+      <section className={`ge-cta pb-120 ${className}`}>
          <div className="container">
             <div className="ge-cta__box wow fadeInUp" data-wow-duration="1000ms">
                <div className="ge-cta__glow" aria-hidden="true"></div>
-               <div className="ge-cta__grid" aria-hidden="true"></div>
                <div className="row g-4 align-items-center position-relative">
                   <div className="col-lg-8">
-                     <span className="ge-eyebrow-light">Talk to our team</span>
+                     <span className="ge-eyebrow-light has-rule">Talk to our team</span>
                      <h2 className="text-white mt-2">{title}</h2>
                      <p className="mt-3">{lead}</p>
                   </div>

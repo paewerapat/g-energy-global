@@ -1,68 +1,46 @@
+// Brand palette from the G-Energy brand sheet (files-logo/logo_brandsheet.png):
+// Navy #0E2A47 · Teal #0E8A7D · Gold #C9A24B · Slate #5B6770 · reversed accents Mint #7FD4C8 / #5EC4B5.
+// Contrast notes (WCAG): brand teal is 4.2:1 on white, so small text/buttons use the darker
+// --primary-color; gold is 2.4:1 on white, so it is decorative-only on light backgrounds.
 :root {
 	// Font family ***
-	--kumbh: "Kumbh Sans", "IBM Plex Sans Thai", sans-serif;
+	--kumbh: "Poppins", "Noto Sans Thai", sans-serif; // brand typeface (variable name kept from the template)
 
 	// Colors ***
-	--primary-color: #3c72fc;
-	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
+	--primary-color: #0b7468; // accessible teal for buttons, links and small text (5.7:1 on white)
+	--primary-hover: #095e55;
+	--primary10: rgba(14, 138, 125, 0.1);
+	--gradient-bg: linear-gradient(90deg, #0e8a7d 0%, #0b6e63 100%);
+	--secondary-color: #0a1f36;
 	--main-bg: #ffffff;
-	--sub-bg: #f3f7fb;
-	--heading-color: #0f0d1d;
-	--paragraph: #585858;
-	--span: #585858;
-	--border: #e3e3e3;
+	--sub-bg: #eef5f3;
+	--heading-color: #0e2a47;
+	--paragraph: #5b6770;
+	--span: #5b6770;
+	--border: #dce6e4;
 	--white: #ffffff;
 	--black: #000000;
 
 	// border ***
-	--border-1px: 1px solid #eaecf0;
-	--border-2px: 2px solid #eaecf0;
+	--border-1px: 1px solid #dce6e4;
+	--border-2px: 2px solid #dce6e4;
 
 	// Transitions ***
 	--transition: all 0.3s ease-in-out;
 
 	// Box shadow ***
-	--shadow: 0px 4px 25px 0px #0000000f;
+	--shadow: 0px 4px 25px 0px rgba(14, 42, 71, 0.08);
 
-	// Redesign tokens ***
-	--ge-navy: #0b1030;
-	--ge-energy: #22c55e;
+	// Brand tokens ***
+	--ge-navy: #0e2a47;
+	--ge-navy-deep: #0a1f36;
+	--ge-navy-mid: #28566a;
+	--ge-teal: #0e8a7d; // icons, strokes, large type, logo
+	--ge-teal-light: #5ec4b5; // links/eyebrows on navy
+	--ge-mint: #7fd4c8; // light accent text on navy (8.4:1)
+	--ge-gold: #c9a24b; // hairlines and accents on navy only
+	--ge-slate: #5b6770;
+	--ge-energy: #0e8a7d;
 	--ge-radius: 14px;
-	--ge-shadow-lg: 0 24px 48px -12px rgba(11, 16, 48, 0.18);
+	--ge-shadow-lg: 0 24px 48px -12px rgba(14, 42, 71, 0.2);
 }
-
-// Dark mood collor area start here ***
-:root[data-theme="dark"] {
-	--primary-color: #3c72fc;
-	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
-	--main-bg: #151327;
-	--sub-bg: #16142c;
-	--heading-color: #fff;
-	--paragraph: rgba(255, 255, 255, 0.8);
-	--span: rgba(255, 255, 255, 0.8);
-	--border: #e3e3e3;
-	--white: #ffffff;
-	--black: #000000;
-}
-// Dark mood collor area end here ***
-
-// Overight the Dark mood collor area stat here ***
-:root[data-theme="dark"] .light-area {
-	--primary-color: #3c72fc;
-	--primary10: rgba(60, 114, 252, 0.1);
-	--gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
-	--secondary-color: #0f0d1d;
-	--main-bg: #ffffff;
-	--sub-bg: #f3f7fb;
-	--heading-color: #0f0d1d;
-	--paragraph: #585858;
-	--span: #585858;
-	--border: #e3e3e3;
-	--white: #ffffff;
-	--black: #000000;
-}
-// Overight the Dark mood collor area end here ***

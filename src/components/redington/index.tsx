@@ -4,6 +4,7 @@ import BreadCrumb from "../common/BreadCrumb"
 import SectionHeader from "../common/SectionHeader"
 import Counter from "../common/Counter"
 import Marquee from "../common/Marquee"
+import MarqueeGroup from "../common/MarqueeGroup"
 import CtaBand from "../common/CtaBand"
 import ServiceExplorer from "./ServiceExplorer"
 import site from "@/data/site"
@@ -63,7 +64,6 @@ const Redington = () => {
                      </div>
                      <div className="col-lg-6">
                         <div className="ge-stat-panel wow fadeInRight" data-wow-duration="1200ms">
-                           <div className="ge-cta__grid" aria-hidden="true"></div>
                            <Image className="ge-stat-panel__logo" src={companyLogos.redingtonWhite} alt="Redington" />
                            <span className="ge-eyebrow-light d-block mt-4">The Redington network</span>
                            <div className="ge-stat-grid mt-30">
@@ -148,7 +148,9 @@ const Redington = () => {
                <div className="container">
                   <p className="ge-trust__label wow fadeInUp" data-wow-duration="1000ms">Brands available through the Redington network</p>
                </div>
-               <Marquee items={redingtonBrands} speed={45} label="Brands available through Redington" />
+               <MarqueeGroup>
+                  <Marquee items={redingtonBrands} speed={45} label="Brands available through Redington" />
+               </MarqueeGroup>
             </section>
 
             <CtaBand title="Need a Redington service in Thailand?" lead="Tell us the products or services you're looking for — we will coordinate everything from sourcing and financing to delivery and support." />

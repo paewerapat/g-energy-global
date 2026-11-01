@@ -13,10 +13,8 @@ import { companyLogos } from "@/data/brands"
 
 import about_thumb1 from "@/assets/images/about/about-two-image1.jpg"
 import about_thumb2 from "@/assets/images/about/about-two-image2.png"
-import shape_1 from "@/assets/images/shape/about-two-shape.png"
-import shape_2 from "@/assets/images/shape/about-two-dot.png"
-import shape_3 from "@/assets/images/shape/about-circle-helper.png"
-import shape_4 from "@/assets/images/shape/about-two-circle.png"
+import brandMark from "@/assets/images/brand/ge-mark.svg"
+import brandMarkReversed from "@/assets/images/brand/ge-mark-reversed.svg"
 
 const structure = [
    {
@@ -28,6 +26,7 @@ const structure = [
    },
    {
       icon: "fa-light fa-bolt-lightning",
+      logo: brandMarkReversed,
       role: "Thailand",
       name: site.legalName,
       desc: "The group's Thai company — local sales, solution design, delivery and support for Thailand and the Mekong region.",
@@ -48,7 +47,7 @@ const About = () => {
          <Header />
          <main id="main">
             <BreadCrumb
-               title={`About ${site.brand}`}
+               title={<>About <span className="text-nowrap">{site.brand}</span></>}
                sub_title="About"
                eyebrow={`A ${site.parentGroup} company`}
                lead="Global technology, local execution — for organisations across Thailand."
@@ -56,27 +55,18 @@ const About = () => {
 
             {/* Who we are */}
             <section className="about-two-area ge-about pt-120 pb-120">
-               <div className="about-two__shape" aria-hidden="true">
-                  <Image src={shape_1} alt="" />
-               </div>
                <div className="container">
                   <div className="row g-5 align-items-center">
                      <div className="col-xl-6 wow fadeInLeft" data-wow-duration="1200ms">
                         <div className="about-two__left-item">
-                           <div className="dots" aria-hidden="true">
-                              <Image className="sway_Y__animation" src={shape_2} alt="" />
-                           </div>
-                           <div className="shape-halper" aria-hidden="true">
-                              <Image className="sway__animation" src={shape_3} alt="" />
-                           </div>
                            <div className="image big-image ge-about__flip">
                               <Image src={about_thumb1} alt="Technology consultant working with enterprise systems" />
                            </div>
                            <div className="image sm-image">
                               <Image src={about_thumb2} alt="Team collaborating on a solution plan" />
                            </div>
-                           <div className="circle-shape" aria-hidden="true">
-                              <Image className="animation__rotate" src={shape_4} alt="" />
+                           <div className="ge-about__mark" aria-hidden="true">
+                              <Image src={brandMark} alt="" />
                            </div>
                         </div>
                      </div>
@@ -149,6 +139,7 @@ const About = () => {
 
             <Offices className="sub-bg" />
             <CtaBand
+               className="pt-120"
                title="Work with a regional group, locally"
                lead="Meet our Bangkok team to discuss your plans — from a single product to a full solution or Redington service."
             />

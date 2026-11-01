@@ -17,7 +17,7 @@
 	z-index: 10000;
 	transform-origin: 0 50%;
 	transform: scaleX(var(--ge-progress, 0));
-	background: linear-gradient(90deg, #3c72fc, #7aa2ff);
+	background: linear-gradient(90deg, #0e8a7d, #5ec4b5);
 	pointer-events: none;
 }
 
@@ -30,7 +30,7 @@
 		position: absolute;
 		inset: 0;
 		border-radius: inherit;
-		background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(60, 114, 252, 0.12), transparent 45%);
+		background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(14, 138, 125, 0.12), transparent 45%);
 		opacity: 0;
 		transition: opacity 0.35s ease;
 		pointer-events: none;
@@ -43,12 +43,10 @@
 
 // Gradient text
 .ge-gradient-text {
-	background: linear-gradient(92deg, #ffffff 0%, #9db8ff 45%, #7aa2ff 70%, #ffffff 100%);
+	background: linear-gradient(92deg, #ffffff 0%, #7fd4c8 50%, #5ec4b5 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-	background-size: 200% auto;
-	animation: ge-shine 2.4s ease-out 0.6s 1 both;
 }
 @keyframes ge-shine {
 	to {
@@ -62,7 +60,7 @@
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #22c55e;
+	background: #5ec4b5;
 	display: inline-block;
 	flex: none;
 	&::after {
@@ -70,7 +68,7 @@
 		position: absolute;
 		inset: -4px;
 		border-radius: 50%;
-		border: 2px solid #22c55e;
+		border: 2px solid #5ec4b5;
 		animation: ge-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 	}
 }

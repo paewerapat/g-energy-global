@@ -6,11 +6,7 @@ import solutions from "@/data/solutions"
 import { redingtonServices } from "@/data/redington"
 import { companyLogos } from "@/data/brands"
 
-import shape_1 from "@/assets/images/shape/footer-regular-left.png"
-import shape_2 from "@/assets/images/shape/footer-solid-left.png"
-import shape_3 from "@/assets/images/shape/footer-regular-right.png"
-import shape_4 from "@/assets/images/shape/footer-solid-right.png"
-import shape_5 from "@/assets/images/shape/footer-shadow-shape.png"
+import brandWatermark from "@/assets/images/brand/brand-watermark.svg"
 
 const socials = [
    { key: "linkedin", icon: "fa-linkedin-in", label: "LinkedIn" },
@@ -23,25 +19,13 @@ const FooterOne = () => {
 
    return (
       <footer className="footer-area secondary-bg ge-footer">
-         <div className="footer__shape-regular-left wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <Image src={shape_1} alt="" />
-         </div>
-         <div className="footer__shape-solid-left wow slideInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <Image className="sway_Y__animation" src={shape_2} alt="" />
-         </div>
-         <div className="footer__shape-solid-right wow slideInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <Image className="sway_Y__animation" src={shape_3} alt="" />
-         </div>
-         <div className="footer__shape-regular-right wow slideInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-            <Image src={shape_4} alt="" />
-         </div>
-         <div className="footer__shadow-shape">
-            <Image src={shape_5} alt="" />
+         <div className="ge-footer__watermark" aria-hidden="true">
+            <Image src={brandWatermark} alt="" />
          </div>
          <div className="container">
             <div className="ge-footer__grid pt-100 pb-80">
                <div className="ge-footer__brand wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1200ms">
-                  <Logo className="mb-25" />
+                  <Logo className="mb-25" withLegalName />
                   <p>{site.legalName} brings global enterprise technology and the full {site.distributionPartner} service portfolio to organisations in Thailand — with local delivery and support.</p>
                   <div className="ge-footer__badges">
                      <div>

@@ -1,9 +1,10 @@
 // Single source of truth for brand + contact details.
 // Email is the only public contact channel for now; empty fields are hidden on the site.
 const site = {
-   brand: "G-Energy Global",
-   legalName: "G-Energy Global Co., Ltd.",
-   tagline: "Global technology. Local execution.",
+   brand: "G-Energy", // matches the logo wordmark
+   legalName: "G-Energy Great Co., Ltd.",
+   legalNameTh: "บริษัท จี-เอ็นเนอร์จี เกรท จำกัด",
+   tagline: "Connecting World-Class Technology. Delivering Local Impact.",
    parentGroup: "Vanguard Biztech",
    distributionPartner: "Redington",
    email: "info@g-energy.global",

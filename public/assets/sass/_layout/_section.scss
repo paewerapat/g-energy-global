@@ -223,8 +223,8 @@
 				border-radius: 0px;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -93.57%,
-					#00060c 228.57%
+					#0e8a7d -93.57%,
+					#0a1f36 228.57%
 				);
 				margin: 0 auto;
 			}
@@ -244,8 +244,8 @@
 				height: 0%;
 				background: linear-gradient(
 					180deg,
-					#3c72fc -21.56%,
-					#00060c 252.19%
+					#0e8a7d -21.56%,
+					#0a1f36 252.19%
 				);
 				border-radius: 8px;
 				transition: var(--transition);
@@ -580,7 +580,7 @@
 		&::before {
 			background: linear-gradient(
 				0deg,
-				#0f0d1d 0%,
+				#0e2a47 0%,
 				rgba(15, 13, 29, 0) 125%
 			);
 		}
@@ -742,7 +742,7 @@
 				content: "";
 				background: linear-gradient(
 					0deg,
-					#3c72fc 0%,
+					#0e8a7d 0%,
 					rgba(0, 0, 0, 0) 100%
 				);
 				transition: var(--transition);
@@ -901,7 +901,7 @@
 	&__icon {
 		@include radius(70px, 70px, 70px);
 		margin: 0 auto;
-		background: linear-gradient(180deg, #3c72fc -210.71%, #00060c 100%);
+		background: linear-gradient(180deg, #0e8a7d -210.71%, #0a1f36 100%);
 		margin-top: -35px;
 		transition: 1s;
 	}
@@ -1576,7 +1576,7 @@
 			height: 0%;
 			background: linear-gradient(
 				359.9deg,
-				#00060c 0.09%,
+				#0a1f36 0.09%,
 				rgba(22, 36, 62, 0) 99.91%
 			);
 		}
@@ -1720,7 +1720,7 @@
 				}
 			}
 		}
-		background: linear-gradient(180deg, #3c72fc -1.09%, #00060c 175.27%);
+		background: linear-gradient(180deg, #0e8a7d -1.09%, #0a1f36 175.27%);
 		padding: 50px 40px;
 		.pricing-head {
 			padding-bottom: 30px;

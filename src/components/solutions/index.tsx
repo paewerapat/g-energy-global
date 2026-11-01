@@ -8,6 +8,7 @@ import BrandLogo from "../common/BrandLogo"
 import Process from "../common/Process"
 import CtaBand from "../common/CtaBand"
 import solutions from "@/data/solutions"
+import site from "@/data/site"
 
 const workloads = [
    { icon: "fa-light fa-building", label: "ERP" },
@@ -24,7 +25,7 @@ const Solutions = () => {
             <BreadCrumb
                title="Solutions"
                sub_title="Solutions"
-               eyebrow="Global technology. Local execution."
+               eyebrow={site.tagline}
                lead="Cloud, infrastructure, open source, data, cybersecurity and energy — chosen, deployed and supported by one local partner."
             />
 
